@@ -1,40 +1,77 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desktop) {
+    //@media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }    
 }
 
 .clients__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;        
+    justify-content: space-around;
+    
+    @include mq(mobile) {
+    //@media screen and (min-width: 480px) {
+            margin: -15px;
+        }   
+
+    @include mq(desktop) {
+    //@media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
 }
 
-.clients__item:not(:last-child) {
-    margin-right: 30px;
+.clients__item {
+    flex-basis: calc(100% / 2 - 30px);    
+
+    @include mq(mobile) {
+    //@media screen and (min-width: 480px) {
+        margin: 15px;
+    }
+
+    @include mq(tablet) {
+    //@media screen and (min-width: 768px) {
+        flex-basis: calc(100% / 3 - 2 * 30px);        
+    }
 }
 
 .clients__link {
-    @include centeredFlex();
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    
-    width: 170px;
-    height: 92px;
-    
-    border: 1px solid $border-color-second;
+    @include centeredFlex();    
+        
+    outline: 1px solid $border-color-second;
     border-radius: 4px;
     color: rgba(175, 177, 184, 1);
 
     transition: color var(--animation-type), border var(--animation-type);
 
-    &:hover,
-    &:focus {
-        border: 1px solid var(--accent-color);
-        color: var(--accent-color);
+    @include mq(mobile) {
+    //@media screen and (min-width: 480px) {
+        padding: 16px 52px;
     }
 
+    @include mq(tablet) {
+    //@media screen and (min-width: 768px) {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    @include mq(desktop) {
+    //@media screen and (min-width: 1200px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    &:hover,
+    &:focus {
+        outline: 1px solid var(--accent-color);
+        color: var(--accent-color);
+    }
 }
 
 .clients__icon {
-    fill: currentColor;
+   fill: currentColor;
 }
