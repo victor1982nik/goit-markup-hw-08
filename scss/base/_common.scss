@@ -5,19 +5,43 @@ body {
     letter-spacing: 0.03em;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 .container {
-    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    
+    @include mq(mobile) {
+    //@media screen and (min-width: 480px) {
+        width: 480px;
+    }    
+
+    @include mq(tablet) {
+    //@media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    
+    @include mq(desktop) {
+    //@media screen and (min-width: 1200px) {
+        width: 1200px;
+    }    
 }
 
 .section__title {
-    margin-bottom: 50px;
-
+    margin-bottom: 30px;
     color: var(--third-color-text);
-    font-size: 36px;
-    line-height: 1.16;
     text-align: center;
+    font-size: 28px;
+    line-height: 1.18;
+        
+    @include mq(desktop) {
+    
+        margin-bottom: 50px;
+        font-size: 36px;     
+        line-height: 1.16;
+    }   
 }
