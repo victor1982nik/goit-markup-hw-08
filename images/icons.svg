@@ -83,5 +83,11 @@
     <symbol id="icon-person" viewBox="0 0 32 32">
       <path d="M16 16c2.947 0 5.333-2.387 5.333-5.333S18.946 5.334 16 5.334c-2.947 0-5.333 2.387-5.333 5.333S13.054 16 16 16zm0 2.667c-3.56 0-10.667 1.787-10.667 5.333v1.333c0 .733.6 1.333 1.333 1.333h18.667c.733 0 1.333-.6 1.333-1.333V24c0-3.547-7.107-5.333-10.667-5.333z"/>
     </symbol>
+    <symbol id="icon-menu" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14.667V12h24v2.667H8Zm0 6.666h24v-2.666H8v2.666ZM8 28h24v-2.667H8V28Z" fill="#000"/>
+    </symbol>
+    <symbol id="icon-closemenu" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M29.667 12.88 27.787 11l-7.454 7.453L12.88 11 11 12.88l7.453 7.453L11 27.787l1.88 1.88 7.453-7.454 7.454 7.454 1.88-1.88-7.454-7.454 7.454-7.453Z" fill="#212121"/>
+    </symbol>
   </defs>
 </svg>
