@@ -1,12 +1,140 @@
 .header {
-    border-bottom: 1px solid #ececec;    
-
-    &__logo {
-        margin-right: 93px;        
+    border-bottom: 1px solid #ececec;   
+    
+    @include mq(tablet) {
+        &__logo {
+            margin-right: 88px;
+        }
     }
 
-    &__container {
+    @include mq(desktop) {
+        &__logo {
+            margin-right: 93px;
+        }
+        
+        &__container {
+            position: absolute;
+            display: flex;
+            align-items: center;
+        }
+    }    
+}
+
+.header__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(desktop) {        
+        @include centeredFlex();
+    }
+}
+
+.menu-btn {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @include mq(tablet){
+        display: none;
+    }
+}
+
+.menu-btn__icon-menu {      
+    .menu-btn.is-open & {
+        display: none;
+    }
+}
+
+.menu-btn__icon-cross {
+    display: none;
+
+    .menu-btn.is-open & {
+        display: block;        
+    }
+}
+
+.navigation {
+    background-color: white;
+
+    @include mq(mobile-only) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    @include mq(tablet) {
         display: flex;
-        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+}
+
+.nav__list {
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.nav__item {
+    @include mq(tablet) {
+        margin-right: 50px;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }    
+}
+
+.nav__link {
+    @include mq(tablet) {
+        display: block;
+        
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    
+    color: var(--third-color-text);
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.nav__link--active {
+    color: var(--accent-color);
+
+    @include mq(tablet) {
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 4px;
+
+            content: "";
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
     }
 }
