@@ -1,5 +1,8 @@
 .contacts {
-    display: flex;
+    @include mq(desktop) {
+        display: flex;
+    }
+        
     align-items: center;
 
     margin-left: auto;
@@ -11,19 +14,25 @@
 }
 
 .contacts__item {
-    margin-right: 50px;
-
-    &:last-child {
-        margin-right: 0;
+    @include mq(tablet-only) {
+        margin-bottom: 10px;
     }
+    @include mq(desktop) {              
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }    
 }
 
 .contacts__link {
     display: flex;
     align-items: center;
     
-    padding-top: 32px;
-    padding-bottom: 32px;
+    @include mq(desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+        
     margin-left: auto;
 
     color: currentColor;
