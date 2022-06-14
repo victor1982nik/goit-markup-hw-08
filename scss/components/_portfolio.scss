@@ -1,20 +1,49 @@
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }    
 }
 
 .filter {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    @include mq(tablet) {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    @include mq(desktop){
+        margin-bottom: 50px;
+    }
 }
 
 .filter__item {
     background-color: var(--secondary-bg-color);
 
-    &:not(:last-child) {
+    @include mq(mobile-only) {
         margin-right: 8px;
+        margin-bottom: 15px;
+        
+        &:nth-child(2n+3) {
+            margin-right: 0;
+        }
+        
+        &:nth-child(n+4) {
+            margin-bottom: 0;
+        }
     }
+    @include mq(tablet) {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }    
 }
 
 .filter__button {
@@ -32,8 +61,8 @@
     border: 0;
 
     transition: color var(--animation-type),
-        background-color var(--animation-type),
-        box-shadow var(--animation-type);
+         background-color var(--animation-type),
+         box-shadow var(--animation-type);
 
     &--active {
         color: var(--fifth-color-text);
@@ -51,22 +80,33 @@
     }
 }
 
-.portfolio {
-    display: flex;
-    flex-wrap: wrap;
+.portfolio__list {
+    @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }    
 }
 
 .portfolio__item {
-    width: 370px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-
-    &:nth-child(3n) {
-        margin-right: 0;
+    width: 100%;
+    @include mq(mobile)
+    {
+        flex-basis: 100%;
     }
-    &:nth-last-child(-n+3) {
-        margin-bottom: 0;
+    @include mq(tablet) {
+        flex-basis: calc((100% - 60px ) / 2);
+        margin: 15px;
     }
+    @include mq(desktop) {
+        flex-basis: calc((100% - 90px) / 3);
+    }
+    
+    @include mq(mobile-only) {
+        &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+    }     
 }
 
 .slider {
@@ -81,7 +121,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 63px 24px;
+    padding: 77px 24px;
+
+    @include mq(tablet) {
+        padding-top: 49px;
+    }
+    @include mq(desktop) {
+        padding-top: 63px;
+        padding-bottom: 63px;
+    }    
 
     font-size: 18px;
     line-height: 1.56;
@@ -97,11 +145,6 @@
     }
 }
 
-// .portfolio__link:hover .slider__text,
-// .portfolio__link:focus .slider__text {
-//     transform: translateY(0);
-// }
-
 .portfolio__link {
     display: block;
     text-decoration: none;
@@ -110,10 +153,10 @@
 
     &:hover,
     &:focus {
-        box-shadow:
-            0px 1px 1px var(--shadow-color-first),
-            0px 4px 4px rgba(0, 0, 0, 0.06),
-            1px 4px 6px rgba(0, 0, 0, 0.16);
+         box-shadow:
+             0px 1px 1px var(--shadow-color-first),
+             0px 4px 4px rgba(0, 0, 0, 0.06),
+             1px 4px 6px rgba(0, 0, 0, 0.16);
     }
 }
 
@@ -136,5 +179,13 @@
 
 .portfolio__description {
     color: var(--first-color-text);
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.88;
+}
+
+.portfolio__photo {
+    @include mq(desktop) {
+        width: 370px;        
+    }
 }
