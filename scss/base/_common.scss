@@ -15,18 +15,15 @@ body.modal-open {
     padding-left: 15px;
     padding-right: 15px;
     
-    @include mq(mobile) {
-    //@media screen and (min-width: 480px) {
+    @include mq(mobile) {    
         width: 480px;
     }    
 
-    @include mq(tablet) {
-    //@media screen and (min-width: 768px) {
+    @include mq(tablet) {    
         width: 768px;
     }
     
-    @include mq(desktop) {
-    //@media screen and (min-width: 1200px) {
+    @include mq(desktop) {    
         width: 1200px;
     }    
 }
@@ -38,8 +35,7 @@ body.modal-open {
     font-size: 28px;
     line-height: 1.18;
         
-    @include mq(desktop) {
-    
+    @include mq(desktop) {    
         margin-bottom: 50px;
         font-size: 36px;     
         line-height: 1.16;
