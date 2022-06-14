@@ -88,6 +88,9 @@
     </symbol>
     <symbol id="icon-closemenu" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M29.667 12.88 27.787 11l-7.454 7.453L12.88 11 11 12.88l7.453 7.453L11 27.787l1.88 1.88 7.453-7.454 7.454 7.454 1.88-1.88-7.454-7.454 7.454-7.453Z" fill="#212121"/>
+    </symbol>    
+    <symbol id="icon-menu2" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+  <path d="M26 16a2 2 0 0 1-2 2H8a2 2 0 0 1 0-4h16a2 2 0 0 1 2 2zM26 8a2 2 0 0 1-2 2H8a2 2 0 0 1 0-4h16a2 2 0 0 1 2 2zM26 24a2 2 0 0 1-2 2H8a2 2 0 0 1 0-4h16a2 2 0 0 1 2 2z"/>
     </symbol>
   </defs>
 </svg>
