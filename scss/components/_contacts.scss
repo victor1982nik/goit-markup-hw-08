@@ -1,19 +1,33 @@
-.contacts {
-    @include mq(desktop) {
-        display: flex;
-    }
-        
-    align-items: center;
-
-    margin-left: auto;
-    
+.contacts {  
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    @include mq(mobile-only)
+    {
+        display: flex;
+        flex-direction: column-reverse;
+
+        margin-bottom: 64px;
+        font-size: 24px;
+        line-height: 1.16;
+    }
+
+    @include mq(desktop) {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+        
+    
 }
 
 .contacts__item {
+    &:last-child {
+        margin-bottom: 32px;
+    }
+
     @include mq(tablet-only) {
         margin-bottom: 10px;
     }
@@ -31,9 +45,9 @@
     @include mq(desktop) {
         padding-top: 32px;
         padding-bottom: 32px;
-    }
-        
-    margin-left: auto;
+
+        margin-left: auto;
+    }   
 
     color: currentColor;
     text-decoration: none;
@@ -49,4 +63,12 @@
 .contacs__icon {
     fill: currentColor;
     margin-right: 10px;
+}
+
+.tel {
+    @include mq(mobile-only) {
+        font-size: 34px;
+            line-height: 1.18;
+            color: var(--accent-color);
+    }   
 }
