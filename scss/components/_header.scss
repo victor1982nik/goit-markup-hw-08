@@ -1,28 +1,18 @@
-.header {
-    position: relative;
+.header {    
     border-bottom: 1px solid #ececec;   
-    
-    @include mq(tablet) {
-        &__logo {
-            margin-right: 88px;
-        }
-    }
 
-    @include mq(desktop) {
-        &__logo {
-            margin-right: 93px;
-        }
+    // @include mq(desktop) {     
         
-        &__container {
-            position: absolute;
-            display: flex;
-            align-items: center;
-        }
-    }    
+    //     &__container {
+    //         position: absolute;
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    // }    
 }
 
 .header__container {
-    
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,8 +24,8 @@
 
 .menu-btn {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 5px;
+    top: 10px;
     display: inline-flex;
     margin: 0;
     padding: 0;
@@ -81,7 +71,8 @@
 
     @include mq(tablet) {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         flex-grow: 1;
     }
 }
