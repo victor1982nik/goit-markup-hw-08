@@ -89,7 +89,9 @@
 }
 
 .portfolio__item {
+    display: block;
     width: 100%;
+    background-color: white;
     @include mq(mobile)
     {
         flex-basis: 100%;
@@ -110,11 +112,8 @@
 }
 
 .slider {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    position: relative;    
+    overflow: hidden;    
 }
 
 .slider__text {
@@ -136,7 +135,7 @@
     color: var(--fifth-color-text);
     background-color: rgba(33, 150, 243, 0.9);
 
-    transform: translateY(100%);
+    transform: translateY(-100%);
     transition: transform var(--animation-type);
 
     .portfolio__link:hover &,
@@ -147,7 +146,15 @@
 
 .portfolio__link {
     display: block;
+    //
+    @include mq(tablet-only) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    //
     text-decoration: none;
+    
 
     transition: box-shadow var(--animation-type);
 
@@ -158,13 +165,20 @@
              0px 4px 4px rgba(0, 0, 0, 0.06),
              1px 4px 6px rgba(0, 0, 0, 0.16);
     }
+        
 }
 
 .portfolio__textbox {
+    //
+    @include mq(tablet-only)
+    {
+        flex-grow: 1;
+    }
     padding: 20px 24px;
 
     border: 1px solid #EEEEEE;
     border-top: none;
+   
 }
 
 .portfolio__title {
