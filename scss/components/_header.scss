@@ -31,24 +31,38 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
     z-index: 10;
 
     @include mq(tablet){
         display: none;
     }
+
+    
 }
 
-.menu-btn__icon-menu {      
+.menu-btn__icon-menu {  
+    
     .menu-btn.is-open & {
         display: none;
     }
 }
 
 .menu-btn__icon-cross {
-    display: none;
+    display: none;    
 
     .menu-btn.is-open & {
-        display: block;        
+        display: block;    
+           
+    }
+}
+
+.menu-btn__icon {
+   fill: black;
+
+    .menu-btn:hover &,
+    .menu-btn:focus & {        
+        fill: var(--accent-color);
     }
 }
 
@@ -167,7 +181,7 @@
     line-height: 1.22;
     color: var(--accent-color);
     border: 0;
-    border-right: 1px solid var(--accent-color);
+    border-right: 1px solid var(--third-color-text);
     padding-right: 10px;
     margin-right: 10px;
     &:last-child {
