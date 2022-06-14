@@ -33,6 +33,7 @@
     }
 
     @include mq(desktop) {
+        text-align: left;
         &:nth-child(1) {
             margin-right: 70px;
         }
@@ -80,7 +81,7 @@
 }
 
 .adress__item {
-    @include mq(mobile-only) {
+    @include mq(mobile) {
         &:not(:last-child) {
             margin-bottom: 8px;
         }
