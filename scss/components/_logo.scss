@@ -2,9 +2,14 @@
     color: var(--accent-color);
     font-family: var(--logo-font);
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    text-decoration: none;    
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1.17;
+
+    @include mq(desktop) {
+        font-size: 26px;
+        line-height: 1.19;
+    }    
 }
 
 .logo__text {
@@ -14,5 +19,20 @@
     }
     &--white {
         color: var(--fifth-color-text);
+    }
+}
+
+.header__logo {    
+    @include mq(mobile-only) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    @include mq(tablet) {        
+        margin-right: 88px;        
+    }
+
+    @include mq(desktop) {
+        margin-right: 93px;        
     }
 }
