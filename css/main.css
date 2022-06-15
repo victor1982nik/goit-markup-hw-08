@@ -184,10 +184,10 @@ button {
 @media screen and (max-width: 767.98px) {
   .navigation {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding: 48px 40px;
   }
@@ -1208,10 +1208,9 @@ button {
 
 .footer__flex {
   text-align: center;
-  margin-bottom: 60px;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
   .footer__flex {
     margin-bottom: 60px;
   }
@@ -1226,9 +1225,6 @@ button {
   }
   .footer__flex:last-child {
     margin-left: auto;
-  }
-  .footer__flex:not(:last-child) {
-    margin-bottom: 9px;
   }
 }
 
