@@ -23,28 +23,23 @@
     }
 }
 
-
 .footer__flex {
     text-align: center;
-    margin-bottom: 60px;
 
-    @include mq(mobile-only) {
-        margin-bottom: 60px;        
+    @include mq(not-desktop) {
+        margin-bottom: 60px;
     }
 
     @include mq(desktop) {
         text-align: left;
+        
         &:nth-child(1) {
             margin-right: 70px;
         }
         
         &:last-child {
             margin-left: auto;
-        }
-        
-        &:not(:last-child) {
-            margin-bottom: 9px;
-        }
+        }        
     }
     
 }
