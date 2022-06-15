@@ -36,9 +36,7 @@
 
     @include mq(tablet){
         display: none;
-    }
-
-    
+    }    
 }
 
 .menu-btn__icon-menu {  
@@ -52,8 +50,7 @@
     display: none;    
 
     .menu-btn.is-open & {
-        display: block;    
-           
+        display: block;           
     }
 }
 
@@ -71,10 +68,10 @@
 
     @include mq(mobile-only) {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         padding: 48px 40px;
 
