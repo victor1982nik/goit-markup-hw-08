@@ -76,8 +76,11 @@
         padding: 48px 40px;
 
         &.is-open {
-            display: block;
+            //display: block;
+            display: flex;
+            flex-direction: column;
         }
+        z-index: 1;
     }
 
     @include mq(tablet) {
@@ -86,14 +89,16 @@
         align-items: center;
         flex-grow: 1;
     }
+    
 }
-.nav {
-    @include mq(mobile-only) {
-        margin-bottom: 300px;
-    }
-}
-.nav__list {   
 
+// .nav {
+//     // @include mq(mobile-only) {
+//     //     display: flex;
+//     //     flex-direction: column;
+//     // }
+// }
+.nav__list {   
     @include mq(tablet){
         display: flex;
         align-items: center;        
